@@ -77,23 +77,28 @@ public class PhotoRetrievalAction extends Action {
             // Save the photo binary to Jahia if needed
             final List<String> copyPhotoParam = stringListMap.get("copyPhoto");
             if (copyPhotoParam != null && new Boolean(copyPhotoParam.get(0))) {
-                logger.info("Copying photo file (" + copyPhotoParam.get(0) + ")");
+                try {
+                    logger.info("Copying photo file (" + copyPhotoParam.get(0) + ")");
 
-                // Get picture binary file from Flickr
-                HttpClient httpClient = new HttpClient();
-                httpClient.getParams().setContentCharset("UTF-8");
-                GetMethod getMethod = new GetMethod(photoURL);
+                    // Get picture binary file from Flickr
+                    HttpClient httpClient = new HttpClient();
+                    httpClient.getParams().setContentCharset("UTF-8");
+                    GetMethod getMethod = new GetMethod(photoURL);
 
-                httpClient.executeMethod(getMethod);
-                InputStream instream =  getMethod.getResponseBodyAsStream();
-                BufferedInputStream bis = new BufferedInputStream(instream);
+                    httpClient.executeMethod(getMethod);
+                    InputStream instream =  getMethod.getResponseBodyAsStream();
+                    BufferedInputStream bis = new BufferedInputStream(instream);
 
-                // Copy file to JCR
-                String mime = getMethod.getResponseHeader("Content-Type").getValue().split(";")[0].trim();
-                logger.info("Picture mime type: " + mime);
-                photoNode.uploadFile("binary", instream, mime);
+                    // Copy file to JCR
+                    String mime = getMethod.getResponseHeader("Content-Type").getValue().split(";")[0].trim();
+                    logger.info("Picture mime type: " + mime);
+                    photoNode.uploadFile("binary", instream, mime);
 
-                instream.close();
+                    instream.close();
+                } catch (Exception exception) {
+                    logger.error("Can't copy binary file to repository");
+                    exception.printStackTrace();
+                }
 
             }
 
@@ -102,7 +107,6 @@ public class PhotoRetrievalAction extends Action {
 
             // This action can be requested from a non Ajax request, so we need to set up a redirection
             // If the action had been designed to be requested from Ajax requests only, we could have used a predefined ActionResult
-            //return ActionResult.OK;
             return new ActionResult(HttpServletResponse.SC_ACCEPTED,
                     renderContext.getMainResource().getNode().getPath());
         }
