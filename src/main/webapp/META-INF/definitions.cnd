@@ -4,7 +4,7 @@
 [jmix:flickrDemo] > jmix:droppableContent mixin
 
 [jnt:flickrGallery] > jnt:content, jmix:flickrDemo, mix:title
- - body (string, richtext) i18n mandatory
+ - body (string, richtext) i18n
  - apiKey (string) mandatory
  - sharedSecret (string) mandatory
  - userID (string) mandatory indexed=no
