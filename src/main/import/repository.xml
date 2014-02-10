@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:jnt="http://www.jahia.org/jahia/nt/1.0" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:commix="http://www.jahia.com/jahia/mix/1.0" xmlns:jmix="http://www.jahia.org/jahia/mix/1.0" xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:rep="internal">
+    <templateSets jcr:primaryType="jnt:templateSets">
+        <flickrModule j:dependencies="default grid rating" j:installedModules="flickrModule" j:originWS="default" j:siteType="module" j:title="Flickr Demo Module" j:wcagCompliance="true" jcr:primaryType="jnt:virtualsite">
+            <portlets j:originWS="default" jcr:primaryType="jnt:portletFolder" />
+            <files j:originWS="default" jcr:primaryType="jnt:folder" />
+            <contents j:originWS="default" jcr:primaryType="jnt:contentFolder" />
+            <templates j:originWS="default" j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
+                <photo-detail-display j:applyOn="jnt:flickrPhoto" j:defaultTemplate="true" j:hiddenTemplate="false" j:originWS="default" j:priority="5" jcr:mixinTypes="jmix:accessControlled" jcr:primaryType="jnt:contentTemplate">
+                    <j:acl j:inherit="true" jcr:primaryType="jnt:acl" />
+                    <j:translation_en jcr:language="en" jcr:mixinTypes="mix:title" jcr:primaryType="jnt:translation" jcr:title="Photo detail display" />
+                    <pagecontent j:originWS="default" jcr:primaryType="jnt:contentList">
+                        <predefined--rows-960gs column="2col124" j:originWS="default" jcr:mixinTypes="jmix:accessControlled" jcr:primaryType="jnt:row">
+                            <j:acl j:inherit="true" jcr:primaryType="jnt:acl" />
+                            <predefined--rows-960gs-col1 j:originWS="default" jcr:primaryType="jnt:contentList">
+                                <back-to-parent-page j:originWS="default" jcr:mixinTypes="jmix:accessControlled" jcr:primaryType="jnt:backToParentPage">
+                                    <j:acl j:inherit="true" jcr:primaryType="jnt:acl" />
+                                </back-to-parent-page>
+                                <main-resource-display j:mainResourceView="default" j:originWS="default" jcr:mixinTypes="jmix:accessControlled" jcr:primaryType="jnt:mainResourceDisplay">
+                                    <j:acl j:inherit="true" jcr:primaryType="jnt:acl" />
+                                </main-resource-display>
+                                <commentable j:originWS="default" jcr:mixinTypes="jmix:accessControlled" jcr:primaryType="jnt:addComment">
+                                    <j:acl j:inherit="true" jcr:primaryType="jnt:acl" />
+                                </commentable>
+                                <display-comments j:originWS="default" jcr:mixinTypes="jmix:accessControlled" jcr:primaryType="jnt:commentsList">
+                                    <j:acl j:inherit="true" jcr:primaryType="jnt:acl" />
+                                </display-comments>
+                            </predefined--rows-960gs-col1>
+                            <predefined--rows-960gs-col2 j:originWS="default" jcr:primaryType="jnt:contentList">
+                                <rating j:originWS="default" jcr:mixinTypes="jmix:accessControlled" jcr:primaryType="jnt:rateable">
+                                    <j:acl j:inherit="true" jcr:primaryType="jnt:acl" />
+                                </rating>
+                            </predefined--rows-960gs-col2>
+                        </predefined--rows-960gs>
+                    </pagecontent>
+                </photo-detail-display>
+                <files j:originWS="default" jcr:primaryType="jnt:folder" />
+                <contents j:originWS="default" jcr:primaryType="jnt:contentFolder" />
+            </templates>
+        </flickrModule>
+    </templateSets>
+</content>
+
