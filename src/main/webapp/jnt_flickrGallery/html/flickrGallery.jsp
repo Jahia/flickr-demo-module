@@ -20,6 +20,8 @@
 
 <h2>${currentNode.properties['jcr:title'].string}</h2>
 
+${currentNode.properties.body.string}
+
 <p>
     <c:forEach items="${flickrGalleryPhotos}" var="pic">
         <c:choose>
