@@ -113,47 +113,7 @@
       </plugin>
     </plugins> 
   </build>  
-  <dependencies> 
-    <dependency> 
-      <groupId>org.scribe</groupId>  
-      <artifactId>scribe</artifactId>  
-      <version>1.3.3</version> 
-    </dependency>  
-    <dependency> 
-      <groupId>axis</groupId>  
-      <artifactId>axis</artifactId>  
-      <version>1.4</version> 
-    </dependency>  
-    <dependency> 
-      <groupId>org.apache.axis</groupId>  
-      <artifactId>axis-jaxrpc</artifactId>  
-      <version>1.4</version> 
-    </dependency>  
-    <dependency> 
-      <groupId>org.apache.axis</groupId>  
-      <artifactId>axis-saaj</artifactId>  
-      <version>1.4</version> 
-    </dependency>  
-    <dependency> 
-      <groupId>junit</groupId>  
-      <artifactId>junit</artifactId>  
-      <version>4.11</version> 
-    </dependency>  
-    <dependency> 
-      <groupId>wsdl4j</groupId>  
-      <artifactId>wsdl4j</artifactId>  
-      <version>1.5.1</version> 
-    </dependency>  
-    <dependency> 
-      <groupId>log4j</groupId>  
-      <artifactId>log4j</artifactId>  
-      <version>1.2.17</version> 
-    </dependency>  
-    <dependency> 
-      <groupId>javax.servlet</groupId>  
-      <artifactId>servlet-api</artifactId>  
-      <version>2.5</version> 
-    </dependency>  
+  <dependencies>
     <dependency> 
       <groupId>com.aetrion.flickr</groupId>  
       <artifactId>flickrapi</artifactId>  
