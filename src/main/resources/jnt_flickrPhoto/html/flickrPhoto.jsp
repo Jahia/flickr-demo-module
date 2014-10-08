@@ -8,7 +8,7 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-<%--@elvariable id="pic" type="com.flickr4java.flickr.photos.Photo"--%>
+<%--@elvariable id="pic" type="com.aetrion.flickr.photos.Photo"--%>
 <%--@elvariable id="flickrGalleryPhotos" type="org.jahia.modules.flickr."--%>
 
 <jcr:nodeProperty node="${currentNode}" name="title" var="title"/>
