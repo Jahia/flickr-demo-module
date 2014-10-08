@@ -7,11 +7,10 @@
 <%--@elvariable id="script" type="org.jahia.services.render.scripting.Script"--%>
 <%--@elvariable id="scriptInfo" type="java.lang.String"--%>
 <%--@elvariable id="workspace" type="java.lang.String"--%>
-<%--@elvariable id="renderContext" type="org.wjahia.services.render.RenderContext"--%>
+<%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <%--@elvariable id="pic" type="com.aetrion.flickr.photos.Photo"--%>
-<%--@elvariable id="flickrGalleryPhotos" type="org.jahia.modules.flickr."--%>
 
 <c:if test="${not renderContext.editMode}">
     <template:addResources type="javascript" resources="jquery.min.js,jquery.fancybox.js,jquery.fancybox.load.js"/>
